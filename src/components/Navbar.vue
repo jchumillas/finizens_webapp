@@ -7,10 +7,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Contactos<span class="sr-only">(current)</span></a>
+          <router-link to="/"><a class="nav-link">Contacts</a></router-link>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+        <li class="nav-item">          
+          <router-link to="/load-file"><a class="nav-link">Load File</a></router-link>
         </li>
       </ul>
     </div>
