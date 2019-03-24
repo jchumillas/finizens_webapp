@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "npm run serve",
-    "build": "npm run build",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "start": "node server.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -16,6 +17,7 @@
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.0-rc.15",
     "i": "^0.3.6",
+    "express": "^4.16.4",
     "jquery": "^3.3.1",
     "npm": "^6.9.0",
     "popper.js": "^1.14.7",
