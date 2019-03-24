@@ -7,7 +7,7 @@
           <b-form @submit="onSubmit">
              <b-form-group
               id="phoneInputGroup"
-              label="Number Telephone:"
+              label="Number Telephone (only works 611111111):"
               label-for="numberInput">
               <b-form-input
                 id="numberInput"
