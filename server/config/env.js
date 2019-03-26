@@ -6,7 +6,7 @@ const Environment = {
     : "https://finizenstest.herokuapp.com",
   dbUrl: development
     ? "mongodb://localhost:27017/finizensdb"
-    : process.env.MONGOLAB_URI
+    : "mongodb://jchumillas:finizens288@ds123346.mlab.com:23346/finizensdb"
 };
 
 module.exports = Environment;
