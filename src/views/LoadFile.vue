@@ -26,6 +26,7 @@
 
 <script>
 import Navbar from "@/components/Navbar.vue";
+import Environment from "@/config/env.js";
 import axios from "axios";
 
 export default {
@@ -47,9 +48,8 @@ export default {
       this.getLogFromApi(number);
     },
     getLogFromApi(number){
-      axios({ method: "GET", "url": "http://localhost:5000/api/agenda/"+number }).then(result => {
+      axios({ method: "GET", "url": Environment.url+"/api/agenda/"+number }).then(result => {
         this.form.number = '';
-        console.log(result);
         this.$store.state.books.push(result.data);
         alert("The number is correctly added");
       }, error => {

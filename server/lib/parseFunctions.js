@@ -79,26 +79,23 @@ class ParseFunctions {
         contacts.push(objContact);
       }
 
+      let objComunication = {};
+      objComunication.date = el.callDate.toLocaleString();
+      let contactIndex = contacts.findIndex(x => x.number === phoneNumber);
+
       if (el.type === "C") {
-        let objCall = {};
-        objCall.callDirection = el.callDirection;
-        objCall.date = el.callDate.toLocaleString();
-        objCall.duration = el.callDuration.toTimeString().split(" ")[0];
-        let contactIndex = contacts.findIndex(x => x.number === phoneNumber);
-        contacts[contactIndex].calls.push(objCall);
+        objComunication.callDirection = el.callDirection;
+        objComunication.duration = el.callDuration.toTimeString().split(" ")[0];
+        contacts[contactIndex].calls.push(objComunication);
       } else if (el.type === "S") {
-        let objSms = {};
-        objSms.smsDirection = el.callDirection;
-        objSms.date = el.callDate.toLocaleString();
-        let contactIndex = contacts.findIndex(x => x.number === phoneNumber);
-        contacts[contactIndex].sms.push(objSms);
+        objComunication.smsDirection = el.callDirection;
+        contacts[contactIndex].sms.push(objComunication);
       }
     }
-    let book = {
+    return {
       number: number,
       contacts: contacts
     };
-    return book;
   }
 }
 

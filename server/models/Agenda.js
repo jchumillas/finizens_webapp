@@ -17,7 +17,7 @@ var AgendaSchema = new mongoose.Schema(
         ],
         sms: [
           {
-            callDirection: Number,
+            smsDirection: Number,
             date: String
           }
         ]
