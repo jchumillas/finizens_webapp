@@ -7,8 +7,9 @@ var express = require('express'),
     mongoose = require('mongoose'),
     cors = require('cors');
 
+const Environment = require("./server/config/env.js");
 
-mongoose.connect("mongodb://localhost:27017/finizensdb").then(
+mongoose.connect(Environment.dbUrl).then(
     () => {console.log('Database connection is successful') },
     err => { console.log('Error when connecting to the database'+ err)}
 );
